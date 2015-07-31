@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.whereplay.liang.dragscrollview.DragScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pulltoRefreshScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.whereplay.liang.dragscrollview.NewScrollView
+            android:id="@+id/myscroll_sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <com.whereplay.liang.dragscrollview.ScaleImageView
+                        android:id="@+id/photo_siv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:visibility="visible"
+                        android:src="@mipmap/head_icon"
+                        android:scaleType="matrix"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/contentPanel_ll"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/search_tv"
+                            android:layout_width="280dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="50dp"
+                            android:text="搜索你喜欢的活动"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp"
+                            android:paddingLeft="30dp"
+                            android:gravity="center"
+                            android:background="@mipmap/search_frame"/>
+
+                        <LinearLayout
+                            android:id="@+id/wearther_ll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="80dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="10dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#ffffff"
+                                android:textSize="15sp"
+                                android:text="北京市"
+                                />
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/triangle"
+                                android:layout_marginLeft="10dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#ffffff"
+                                android:textSize="15sp"
+                                android:layout_marginLeft="10dp"
+                                android:text="阴"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ffffff"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/indicator_bottom"
+                                android:layout_width="fill_parent"
+                                android:layout_height="50dp"
+                                android:weightSum="3">
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:layout_weight="1">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:drawableLeft="@mipmap/today_icon_jingxuan_normal"
+                                        android:text=" 精选"
+                                        android:textSize="18sp"
+                                        android:gravity="center_vertical"/>
+                                </RelativeLayout>
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:layout_weight="1">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:drawableLeft="@mipmap/today_icon_today_normal"
+                                        android:text=" 今天"
+                                        android:textSize="18sp"
+                                        android:gravity="center_vertical"/>
+                                </RelativeLayout>
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:layout_weight="1">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:drawableLeft="@mipmap/today_icon_nearby_normal"
+                                        android:text=" 附近"
+                                        android:textSize="18sp"
+                                        android:gravity="center_vertical"/>
+                                </RelativeLayout>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="15dp">
+                                <ImageView
+                                    android:layout_width="3dp"
+                                    android:layout_height="20dp"
+                                    android:background="#ffa72b"
+                                    android:layout_gravity="center_vertical"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="热门活动"
+                                    android:layout_gravity="center_vertical"/>
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/item1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@mipmap/photo1"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"/>
+                            <ImageView
+                                android:id="@+id/item2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@mipmap/photo2"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="10dp"/>
+                            <ImageView
+                                android:id="@+id/item3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@mipmap/photo3"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="10dp"/>
+                            <ImageView
+                                android:id="@+id/item4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@mipmap/photo4"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="10dp"/>
+                            <ImageView
+                                android:id="@+id/item5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@mipmap/photo5"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="10dp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </com.whereplay.liang.dragscrollview.NewScrollView>
+    </com.whereplay.liang.dragscrollview.DragScrollView>
+
+    <LinearLayout
+        android:id="@+id/indicator_top"
+        android:background="#ffffff"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:visibility="invisible"
+        android:weightSum="3">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@mipmap/today_icon_jingxuan_normal"
+                android:text=" 精选"
+                android:textSize="18sp"
+                android:gravity="center_vertical"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@mipmap/today_icon_today_normal"
+                android:text=" 今天"
+                android:textSize="18sp"
+                android:gravity="center_vertical"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@mipmap/today_icon_nearby_normal"
+                android:text=" 附近"
+                android:textSize="18sp"
+                android:gravity="center_vertical"/>
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>
+
+
